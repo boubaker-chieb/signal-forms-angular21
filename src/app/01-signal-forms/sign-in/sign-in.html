@@ -1,0 +1,47 @@
+<div>
+    <form>
+      <h2>Sign in</h2>
+    <div>
+      <label>
+        Email:
+        <input type="email" [field]="form.email" />
+      </label>
+      @if(form.email().invalid() && form.email().touched()){
+      <div class="error-list">
+        @for (error of form.email().errors(); track error) {
+            <p>{{ error.message }}</p>
+        }
+      </div>
+      }
+    </div>
+    <div>
+      <label>
+        Pseudo:
+        <input type="text" [field]="form.pseudo" />
+      </label>
+      @if(form.pseudo().invalid() && form.pseudo().touched()){
+      <div class="error-list">
+        @for(error of form.pseudo().errors(); track error){
+            <p>{{ error.message }}</p>
+        }
+      </div>
+      }
+    </div>
+    <div>
+      <label>
+        Password:
+        <input type="password" [field]="form.password" />
+      </label>
+      @if(form.password().invalid() && form.password().touched()){
+      <div class="error-list">
+        @for(error of form.password().errors(); track error){
+            <p>{{ error.message }}</p>
+        }
+      </div>
+      }
+    </div>
+    <div>
+      <button (click)="onSubmit()">SignIn</button>
+    </div>
+  </form>
+</div>

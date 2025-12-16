@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LeaveNote } from './leave-note';
+import { LeaveComment } from './leave-comment';
 
-describe('LeaveNote', () => {
-  let component: LeaveNote;
-  let fixture: ComponentFixture<LeaveNote>;
+describe('LeaveComment', () => {
+  let component: LeaveComment;
+  let fixture: ComponentFixture<LeaveComment>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LeaveNote]
+      imports: [LeaveComment]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LeaveNote);
+    fixture = TestBed.createComponent(LeaveComment);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

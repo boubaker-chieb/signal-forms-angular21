@@ -26,6 +26,6 @@ export class SignIn {
     minLength(schemaPath.password, 8, { message: 'Password must contain at least 8 characters' });
   });
   onSubmit() {
-    console.log(this.form().value());
+    console.log(this.signInModel());
   }
 }
